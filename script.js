@@ -15,3 +15,11 @@ closebutton.addEventListener("click", toggleOpenCloseWindow);
 btn.forEach((element) => {
   element.addEventListener("click", toggleOpenCloseWindow);
 });
+document.addEventListener("keydown", (e) => {
+  if (e.key == "Escape") {
+    if (!windowInformaion.classList.contains("hidden")) {
+      overlay.classList.add("hidden");
+      return windowInformaion.classList.add("hidden");
+    }
+  }
+});
